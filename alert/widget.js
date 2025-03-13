@@ -6,6 +6,12 @@ let hideDelay = 2000
 
 let easing = 'easeOutCubic'
 
+let audioSub
+let audioGift
+let audioRaid
+let audioSuperchat
+let audioTipCheer
+
 let icon
 let content
 
@@ -33,15 +39,15 @@ window.addEventListener('onWidgetLoad', function (obj) {
     })
     
 
-    let audioSub = new Audio('https://github.com/jgerdum/se-widgets-steelovsky/blob/main/alert/sounds/sub.ogg?raw=true')
+    audioSub = new Audio('https://github.com/jgerdum/se-widgets-steelovsky/blob/main/alert/sounds/sub.ogg?raw=true')
     audioSub.volume = 0.25
-    let audioGift = new Audio('https://github.com/jgerdum/se-widgets-steelovsky/blob/main/alert/sounds/gift.ogg?raw=true')
+    audioGift = new Audio('https://github.com/jgerdum/se-widgets-steelovsky/blob/main/alert/sounds/gift.ogg?raw=true')
     audioGift.volume = 0.25
-    let audioRaid = new Audio('https://github.com/jgerdum/se-widgets-steelovsky/blob/main/alert/sounds/raid.ogg?raw=true')
+    audioRaid = new Audio('https://github.com/jgerdum/se-widgets-steelovsky/blob/main/alert/sounds/raid.ogg?raw=true')
     audioRaid.volume = 0.25
-    let audioSuperchat = new Audio('https://github.com/jgerdum/se-widgets-steelovsky/blob/main/alert/sounds/superchat.ogg?raw=true')
+    audioSuperchat = new Audio('https://github.com/jgerdum/se-widgets-steelovsky/blob/main/alert/sounds/superchat.ogg?raw=true')
     audioSuperchat.volume = 0.25
-    let audioTipCheer = new Audio('https://github.com/jgerdum/se-widgets-steelovsky/blob/main/alert/sounds/tip-cheer.ogg?raw=true')
+    audioTipCheer = new Audio('https://github.com/jgerdum/se-widgets-steelovsky/blob/main/alert/sounds/tip-cheer.ogg?raw=true')
     audioTipCheer.volume = 0.25
     reset()
 })
