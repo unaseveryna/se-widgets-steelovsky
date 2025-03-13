@@ -1,1 +1,2 @@
-Custom StreamElements widgets for Steelovsky
+# se-widgets-steelovsky
+Overlay for Steve of Sky
