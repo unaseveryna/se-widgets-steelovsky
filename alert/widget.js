@@ -39,15 +39,15 @@ window.addEventListener('onWidgetLoad', function (obj) {
     })
     
 
-    audioSub = new Audio('https://github.com/jgerdum/se-widgets-steelovsky/blob/main/alert/sounds/sub.ogg?raw=true')
+    audioSub = new Audio('https://github.com/unaseveryna/se-widgets-steelovsky/blob/main/alert/sounds/sub.ogg?raw=true')
     audioSub.volume = 0.25
-    audioGift = new Audio('https://github.com/jgerdum/se-widgets-steelovsky/blob/main/alert/sounds/gift.ogg?raw=true')
+    audioGift = new Audio('https://github.com/unaseveryna/se-widgets-steelovsky/blob/main/alert/sounds/gift.ogg?raw=true')
     audioGift.volume = 0.25
-    audioRaid = new Audio('https://github.com/jgerdum/se-widgets-steelovsky/blob/main/alert/sounds/raid.ogg?raw=true')
+    audioRaid = new Audio('https://github.com/unaseveryna/se-widgets-steelovsky/blob/main/alert/sounds/raid.ogg?raw=true')
     audioRaid.volume = 0.25
-    audioSuperchat = new Audio('https://github.com/jgerdum/se-widgets-steelovsky/blob/main/alert/sounds/superchat.ogg?raw=true')
+    audioSuperchat = new Audio('https://github.com/unaseveryna/se-widgets-steelovsky/blob/main/alert/sounds/superchat.ogg?raw=true')
     audioSuperchat.volume = 0.25
-    audioTipCheer = new Audio('https://github.com/jgerdum/se-widgets-steelovsky/blob/main/alert/sounds/tip-cheer.ogg?raw=true')
+    audioTipCheer = new Audio('https://github.com/unaseveryna/se-widgets-steelovsky/blob/main/alert/sounds/tip-cheer.ogg?raw=true')
     audioTipCheer.volume = 0.25
     reset()
 })
@@ -195,6 +195,7 @@ function handleShowAlert() {
 }
 
 function reset() {
+    try {
     audioSub.pause()
     audioSub.currentTime = 0
     audioGift.pause()
@@ -205,6 +206,9 @@ function reset() {
     audioSuperchat.currentTime = 0
     audioTipCheer.pause()
     audioTipCheer.currentTime = 0
+    } catch (error) {
+        console.log(error)
+    }
 
     anime.set('.main', {
         opacity: 0,
